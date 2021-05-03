@@ -1,7 +1,7 @@
 # Measure Image Similarities
 Compare images with the image-similarity-measure Python library
 
-This project is a demo for my technical tutorial series on medium.com: 
+This project is a demo for my technical tutorial on medium.com: 
 
 
 ## How to start this project:
