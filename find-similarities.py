@@ -28,20 +28,16 @@ for file in os.listdir(data_dir):
 	sre_measures[img_path]= sre(test_img, resized_img)
 
 def calc_closest_val(dict, checkMax):
-    result = {}
-    if (checkMax):
-    	closest = max(dict.values())
-    else:
-    	closest = min(dict.values())
-    		
-    for key, value in dict.items():
-    	print("The difference between ", key ," and the original image is : \n", value)
-    	if (value == closest):
-    	    result[key] = closest
-    	    
-    print("The closest value: ", closest)	    
-    print("######################################################################")
-    return result
+	result = {}
+	closest = max(dict.values()) if (checkMax) else min(dict.values())
+	for key, value in dict.items():
+		print("The difference between ", key ," and the original image is : \n", value)
+		if (value == closest):
+		    result[key] = closest
+
+	print("The closest value: ", closest)
+	print("######################################################################")
+	return result
     
 ssim = calc_closest_val(ssim_measures, True)
 rmse = calc_closest_val(rmse_measures, False)
